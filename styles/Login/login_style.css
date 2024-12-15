@@ -1,0 +1,85 @@
+html, body {
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			font-family: Arial, sans-serif;
+		}
+
+		.background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			
+			background: url('images/phone.jpg') no-repeat center center/cover; /* Замените на ваш фон */
+			filter: blur(4px); /* Уровень размытия */
+			z-index: -1; /* Помещаем фон за содержимое */
+		}
+
+
+			 /* Стили для формы */
+		.login-form {
+			position: relative;
+			background: #1f2224;
+			
+			margin-left: 777px;
+			margin-top: 300px;
+			padding: 20px 10px;
+			border-radius: 10px;
+			text-align: center;
+			width: 355px; /* Ширина формы */
+			
+		}
+
+		.login-form h2 {
+			margin-bottom: 20px;
+			color: white;
+		}
+
+		.login-form input{
+			width: 88%;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			transition: all 0.3 ease;
+			outline: none;
+		}
+
+		.login-form input:focus{
+			border-color: #007BFF;
+			box-shadow: 0 0 8px rgba(255, 2, 255, 0.5); /* Тень при фокусе */
+			background-color: #fff; /* Белый фон при фокусе */
+		}
+
+		.login-form button {
+			width: 88%;
+			padding: 10px;
+			background-color: #007BFF; /* Цвет кнопки */
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.4s, box-shadow 0.2s 0.3s;
+		}
+
+		.login-form button:hover {
+			background-color: #0056b3; /* Цвет кнопки при наведении */
+		    box-shadow: 0 0 0 2px #0056b3, 0 0 0 4px #3f8a7c; /* Тень в виде рамки */
+		}
+
+	a{
+
+		text-decoration: none;
+		color:rgba(83, 154, 230, 0.4);
+		font-size: 13px;
+	}
+
+	/* Скрытие форм */
+	.hidden {
+		display: none;
+	}

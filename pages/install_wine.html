@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/Wine/wine_style.css">
+    <title>Установка Wine</title>
+</head>
+<body>
+
+    <img class="background" src="../images/phone.jpg">
+
+
+    <div class="block_logo">
+        
+        <p style="color: white; right: 0; top: 0; display:flex; position: absolute" >👋Привет, <a href=""> гость!</a></p>
+        <img src="../images/logo.png" style="width: 90px; position: absolute;" alt="">
+        <h1 style="color: white; margin-left: 111px; ">Linux Universe</h1>
+        <p style="color: white; margin-left: 111px;" > <b>Linux Universe</b> — ваш портал в мир свободного программного обеспечения!</p>
+    </div>
+    <div class="navbar">
+        <a href="../pages/home.html">Главная</a>
+        <a href="#">Новости</a>
+    
+        <div class="dropdown">
+          <button class="dropbtn"> Дистрибутивы 
+            <i class="fa fa-caret-down"></i>
+          </button>
+    
+          <div class="dropdown-content">
+            <a href="#">Ubuntu</a>
+            <a href="#">Arch linux</a>
+            <a href="#">Red Hat</a>
+            <a href="#">Manjaro</a>
+            <a href="#">Linux mint</a>
+          </div>
+    
+        </div> 
+    
+        <div class="dropdown">
+            <button class="dropbtn">Статьи
+                <i class="fa fa-caret-down"></i>
+            </button>
+      
+            <div class="dropdown-content">
+              <a href="#">Установка Linux</a>
+              <a href="../pages/install_wine.html">Wine установка и руководство</a>
+    
+            </div>
+      
+        </div>
+    </div>
+
+    <div class="content-block">
+
+        <h2>🍷 Установка Wine</h2>
+        <p>Сегодня мы попытаемся установить инструмент Wine, для запуска Windows програм и не только. Wine позволяется взаимодействовать с реестром и имеет поддежку Net Framework</p>
+        
+        <h3>Ubuntu</h3>
+        <code>
+            sudo apt-get intall -y wine
+        </code>
+
+        <p>Результат: </p>
+        <img src="..//images/wine.png"  style="width: 500px;" "">
+
+        <p>Проверяем версию языка: </p>
+
+        <code>wine --version</code>
+        <p>Всё отлично работает! Мне вывелось версия языка <b>wine-9.0 (Ubuntu 9.0~repack-4build3)</b>, это означает, что Wine успешно установлен!</p>
+    
+        <h2>Установка через репозоторий</h2>
+        <p>Первый вариант может у вас не сработал, но мы можем установить Wine через пакеты, делается это легко.</p>
+        <p>С начало необходимо для <b>64 битных</b> систем добавить поддержку архитектуры i386:</p>
+        <code>sudo dpkg --add-architecture i386</code> <br>
+
+        <p>Далее добавляем официальный ключ для репозотория wine:</p>
+        <code>wget -nc https://dl.winehq.org/wine-builds/winehq.key</code> 
+        <code>wget -nc https://dl.winehq.org/wine-builds/winehq.key</code>
+        <br>
+        <br>
+
+        <p>Результат:</p>
+        <img src="../images/wine-3.png" style="width: 500px;">
+
+        <h2>Заключение</h2>
+        <p>Мы успешно установили Wine и теперь вы можете запускать любой exe файл.</p>
+        <p>Могут возникнуть проблемы с Wine и их решать не так трудно, интернет в помощь!</p>
+
+        <h2>❤️Понравилась статья?</h2>
+        <div class="buttons">
+            <button class="like">Да</button>
+            <button class="dislike">Нет</button>
+          </div>
+        </div>
+
+
+          <div class="popup" id="likePopup">
+            <p>Спасибо за ваш лайк!</p>
+            <button onclick="closePopup('likePopup')">Закрыть</button>
+          </div>
+        
+          <!-- Всплывающее окно для Дизлайка -->
+          <div class="popup" id="dislikePopup">
+            <p>Мы сожалеем, что вам не понравилось. Пожалуйста, опишите проблему:</p>
+            <textarea rows="4" cols="30" placeholder="Опишите проблему..."></textarea>
+            <button onclick="closePopup('dislikePopup')">Отправить</button>
+          </div>
+        
+          <!-- Затемнение фона -->
+          <div class="overlay" id="overlay"></div>
+          <script src="../scripts/yes_or_no.js"></script>
+
+    </body>
+    
+</html>
