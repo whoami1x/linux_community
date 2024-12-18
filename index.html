@@ -13,37 +13,40 @@
   <img class="background" src="images/phone.jpg">
 
   <img class="background">
-  <div class="login-form" id="loginForm" >
 
 
-    <!-- Логин форма -->
-    <form id="loginForm">
-      <h2>Добро пожаловать!</h2>
+  <div class="container">
+      <div class="login-form" id="loginForm" >
 
-      <!--поля ввода -->
-      <input id="login" type="text" placeholder="Логин" required>
-      <input id="password" type="password" placeholder="Пароль" required>
 
-      <!--кнопка для входа -->
-      <button type="submit">Войти</button>
+        <!-- Логин форма -->
+        <form id="loginForm">
+          <h2>Добро пожаловать!</h2>
 
-    </form>
-    <a href="#" onclick="showRegisterForm()">Нет аккаунта?</a>
+          <!--поля ввода -->
+          <input id="login" type="text" placeholder="Логин" required>
+          <input id="password" type="password" placeholder="Пароль" required>
 
-  </div>
-   <div class="login-form hidden" id="registerForm">
+          <!--кнопка для входа -->
+          <button type="submit">Войти</button>
 
-    <form id="registerForm">
-      <h2>Регистрация</h2>
+        </form>
+        <a href="#" onclick="showRegisterForm()">Нет аккаунта?</a>
 
-      <input id="username2" type="text" placeholder="Имя пользователя" required>
-      <input id="email2" type="email" placeholder="Email" required>
-      <input id="password2" type="password" placeholder="Пароль" required>
-      <button type="submit" >Зарегистрироваться</button>
-    </form>
-    <a href="#" onclick="showLoginForm()">Уже есть аккаунт?</a>
-  </div>
+      </div>
+      <div class="login-form hidden" id="registerForm">
 
+        <form id="registerForm">
+          <h2>Регистрация</h2>
+
+          <input id="username2" type="text" placeholder="Имя пользователя" required>
+          <input id="email2" type="email" placeholder="Email" required>
+          <input id="password2" type="password" placeholder="Пароль" required>
+          <button type="submit" >Зарегистрироваться</button>
+        </form>
+        <a href="#" onclick="showLoginForm()">Уже есть аккаунт?</a>
+      </div>
+</div>
 
  <script src="scripts/login.js"></script> <!-- настройка логина-->
  
